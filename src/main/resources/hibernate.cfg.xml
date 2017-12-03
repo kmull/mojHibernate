@@ -6,9 +6,9 @@
     <session-factory>
         <!-- Database connection properties - Driver, URL, user, password -->
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost/pawelDb</property>
-        <property name="hibernate.connection.username">pawel</property>
-        <property name="hibernate.connection.password">pawel123</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:32768/krzysztofDatabase</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">root</property>
 
         <!-- org.hibernate.HibernateException: No CurrentSessionContext configured! -->
         <property name="hibernate.current_session_context_class">thread</property>
@@ -17,5 +17,6 @@
         <property name="hbm2ddl.auto">validate</property>
         <!-- Mapping with model class containing annotations -->
         <mapping class="com.infoshareacademy.car.domain.model.Car"/>
+        <mapping class="com.infoshareacademy.car.domain.model.Webpage"/>
     </session-factory>
 </hibernate-configuration>

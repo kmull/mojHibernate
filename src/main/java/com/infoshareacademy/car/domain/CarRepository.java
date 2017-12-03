@@ -8,7 +8,8 @@ import org.hibernate.Transaction;
 public class CarRepository {
 
     public Car findCarById(long id) {
-        Session session= SessionFactoryProvider.getSessionFactory().getCurrentSession();
+        Session session= SessionFactoryProvider
+                .getSessionFactory().getCurrentSession();
         Transaction tx = session.beginTransaction();
         Car car = (Car) session.get(Car.class, id);
         tx.commit();
